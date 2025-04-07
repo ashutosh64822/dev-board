@@ -25,6 +25,7 @@ document.getElementById('get-theme-color').addEventListener('click', function ()
         });
     }
 });
+
 function getCurrentTimeAMPM() {
     let now = new Date();
     let hours = now.getHours();
@@ -33,7 +34,6 @@ function getCurrentTimeAMPM() {
     let ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12 || 12;
 
-    // Ensure 2 digits for minutes and seconds
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
@@ -43,6 +43,8 @@ function getCurrentTimeAMPM() {
 let btns = document.querySelectorAll('.task-btn');
 let messageBox = document.getElementById('messageBox');
 
+let completedCount = 0; // ✅ Add counter to track disabled buttons
+
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function (event) {
         alert('Board Updated Successfully');
@@ -50,7 +52,6 @@ for (let i = 0; i < btns.length; i++) {
         let taskName = this.getAttribute('data-task');
         let time = getCurrentTimeAMPM();
 
-        // Create a paragraph element with task details
         let para = document.createElement('p');
         para.innerText = `You have Completed The Task ${taskName} at ${time}`;
         para.classList.add('para-style');
@@ -68,15 +69,34 @@ for (let i = 0; i < btns.length; i++) {
 
         // Disable the clicked button
         this.disabled = true;
+
+        // ✅ Increment completed count and check if all buttons are disabled
+        completedCount++;
+        if (completedCount === btns.length) {
+            setTimeout(() => {
+                alert("congrats🎉 You have completed all the tasks!");
+            },500);
+        }
     });
 }
 
-document.getElementById('clear-btn').addEventListener('click', function() {
-    messageBox.innerHTML = ''; // Clear all messages
+document.getElementById('clear-btn').addEventListener('click', function () {
+    messageBox.innerHTML = '';
 });
 
+document.getElementById('discover-btn').addEventListener('click', function () {
+    window.location.href = 'blog.html';
+});
 
-document.getElementById('discover-btn')
-    .addEventListener('click', function () {
-        window.location.href = 'blog.html';
-    });
+function getCurrentDateWithDay() {
+    const now = new Date();
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    return now.toLocaleDateString('en-US', options);
+}
+
+document.getElementById('date').innerText = getCurrentDateWithDay();
