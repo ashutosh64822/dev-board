@@ -27,9 +27,12 @@
               class="flex items-center justify-center p-2 bg-slate-200 rounded-full"
             >
               <img src="./assets/checkbox.png" alt="" />
-              <h1 class="ml-2">24</h1>
+              <h1 id="complete-task" class="ml-2 font-bold">24</h1>
             </div>
-            <div class="ml-9 bg-slate-200 p-2 rounded-full">
+            <div
+              id="get-theme-color"
+              class="ml-9 bg-slate-200 p-2 rounded-full cursor-pointer"
+            >
               <img src="./assets/theme-btn.png" alt="" />
             </div>
           </div>
@@ -52,7 +55,7 @@
               </div>
               <div class="ml-1">
                 <h3 class="text-sm">Task Assigned</h3>
-                <p class="font-bold text-3xl">05</p>
+                <p id="count-task" class="font-bold text-3xl">06</p>
               </div>
             </div>
             <div
@@ -96,7 +99,12 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Fix Mobile Button Issue"
+                >
+                  Completed
+                </button>
               </div>
             </div>
             <!-- card 2 -->
@@ -114,14 +122,19 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Add Dark Mode"
+                >
+                  Completed
+                </button>
               </div>
             </div>
             <!-- card 3 -->
             <div class="bg-blue-50 p-5 rounded-lg">
               <div>
                 <p class="btn bg-white outline-none">SwiftPay</p>
-                <h1 class="my-4 text-xl font-medium">Optimize Home page </h1>
+                <h1 class="my-4 text-xl font-medium">Optimize Home page</h1>
                 <p class="bg-white py-4 px-3 text-slate-500 rounded-lg">
                   Debug using Chrome DevTools, check for overlapping elements,
                   and ensure properly and ensure onClick works properly
@@ -132,7 +145,12 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Optimize Home page"
+                >
+                  Completed
+                </button>
               </div>
             </div>
             <!-- card 4 -->
@@ -150,7 +168,12 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Add new emoji 🤲"
+                >
+                  Completed
+                </button>
               </div>
             </div>
             <!-- card 5 -->
@@ -168,7 +191,12 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Integrate OpenAI API"
+                >
+                  Completed
+                </button>
               </div>
             </div>
             <!-- card 6 -->
@@ -186,7 +214,12 @@
                   <h4 class="text-sm">Deadline</h4>
                   <p class="font-medium">21 March 2025</p>
                 </div>
-                <button class="btn bg-blue-600 text-white">Completed</button>
+                <button
+                  class="task-btn btn bg-blue-600 text-white"
+                  data-task="Improve Job searching"
+                >
+                  Completed
+                </button>
               </div>
             </div>
           </div>
@@ -194,17 +227,25 @@
 
         <!-- grid right side  -->
         <div class="bg-white rounded-lg">
-          <div class="flex flex-col items-center  justify-center">
+          <div class="flex flex-col items-center justify-center">
             <div class="flex items-center justify-center mt-6 mb-4">
               <div>
                 <img src="./assets/activity.png" alt="" />
               </div>
               <p class="ml-4 font-medium text-xl">Activity Log</p>
             </div>
-            <button class="btn font-medium bg-blue-600 text-white px-8">Clear History</button>
+            <button class="btn font-medium bg-blue-600 text-white px-8">
+              Clear History
+            </button>
+            <div
+              id="messageBox"
+              class="px-4 py-2 bg-blue-50 text-gray-700 rounded-xl shadow-sm text-sm font-medium mt-6 mx-3"
+            ></div>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="dev.js"></script>
   </body>
 </html>
