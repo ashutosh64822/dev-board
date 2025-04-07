@@ -43,10 +43,15 @@ let messageBox = document.getElementById('messageBox');
 
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function (event) {
+        alert('Board Updated Successfully');
         let taskName = this.getAttribute('data-task');
         let time = getCurrentTimeAMPM();
-        messageBox.innerText = 'You have Complete The Task ' + taskName + ' at ' + time;
-        messageBox.classList.remove('hidden');
+
+        let para = document.createElement('p');
+        para.innerText = `You have Complete The Task ${taskName} at ${time}`;
+        para.classList.add('para-style');
+        messageBox.appendChild(para);
+        
 
         let countTask = document.getElementById('count-task').innerText;
         let finalTask = countTask - 1;
@@ -56,6 +61,14 @@ for (let i = 0; i < btns.length; i++) {
         let intCompleteTask = parseInt(completeTask);
         let completeFinalTask = intCompleteTask + 1;
         document.getElementById('complete-task').innerText = completeFinalTask;
+
+        for (let i = 0; i < btns.length; i++) {
+            if (!btns[i].disabled) {
+                btns[i].disabled = true;
+                break;
+            }
+        }
+
     });
 }
 

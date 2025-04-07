@@ -1,0 +1,12 @@
+.para-style {
+  padding: 8px 16px;
+  background-color: oklch(97% 0.014 254.604);
+  color: oklch(37.3% 0.034 259.733);
+  border-radius: 8px;
+  box-shadow: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
