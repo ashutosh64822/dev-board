@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+    <!-- daisyUI cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-blue-50">
+    <header class="mx-18 py-6">
+      <nav>
+        <div class="navbar bg-base-100 rounded-md shadow-sm px-6">
+          <div class="flex-1 flex items-center">
+            <img class="max-w-12 max-h-12" src="./assets/logo.png" alt="" />
+            <a class="text-4xl font-light"
+              >Dev<span class="font-bold">Board</span></a
+            >
+          </div>
+          <div>
+            <button id="back-to-desk" class="btn bg-blue-600 text-white">Back to Desk</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <h1 class="text-center font-bold text-3xl">Blog</h1>
+      </div>
+      <section>
+        <!-- question-1  -->
+        <div class="bg-white w-4/5 mx-auto mt-6 p-6 shadow-lg rounded-lg">
+          <h4 class="font-medium">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h4>
+          <hr />
+          <p>
+            There are several ways to select an element in the DOM (Document
+            Object Model) using JavaScript. The most common methods are:
+            <br />
+            <span class="font-medium">1.getElementById():</span>
+            Selects an element by its ID.
+            <br />
+            <span class="font-medium">2.getElementsByClassName():</span> Selects
+            all elements with a specific class name. <br />
+            <span class="font-medium">3.getElementsByTagName():</span> Selects
+            all elements of a specific HTML tag. <br />
+            <span class="font-medium">4.querySelector():</span> Selects the
+            first element that matches a CSS selector. <br />
+            <span class="font-medium">5.querySelectorAll():</span> Selects all
+            elements that match a CSS selector.
+          </p>
+        </div>
+
+        <!-- question-2  -->
+
+        <div class="bg-white w-4/5 mx-auto mt-6 p-6 shadow-lg rounded-lg">
+          <h4 class="font-medium">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h4>
+          <hr />
+          <p>
+            Here’s the difference between innerHTML, innerText, and textContent:
+            <br />
+            <span class="font-medium">1.innerHTML:</span>
+            It gets or sets the HTML content of an element. This includes any
+            HTML tags inside the element.
+            <br />
+            <span class="font-medium">2.innerText:</span> It gets or sets the
+            text content of an element, excluding any HTML tags. It also
+            considers the styles applied to the element (such as display: none),
+            so it may not return hidden text.<br />
+            <span class="font-medium">3.textContent:</span> It gets or sets the
+            text content of an element, but unlike innerText, it does not
+            consider the styles. It will get all the text content, including
+            text that is hidden (such as display: none).
+          </p>
+        </div>
+        <!-- question-3  -->
+        <div class="bg-white w-4/5 mx-auto mt-6 p-6 shadow-lg rounded-lg">
+          <h4 class="font-medium">
+            Question-3: What is event delegation in the DOM?
+          </h4>
+          <hr />
+          <p>
+            Event Delegation is a technique in JavaScript where you assign a
+            single event listener to a parent element instead of adding event
+            listeners to each individual child element. This is particularly
+            useful when you have dynamically added elements or a large number of
+            child elements.
+          </p>
+        </div>
+        <!-- question-4  -->
+        <div class="bg-white w-4/5 mx-auto mt-6 p-6 shadow-lg rounded-lg">
+          <h4 class="font-medium">
+            Question-4: What is event bubbling in the DOM?
+          </h4>
+          <hr />
+          <p>
+            Event Bubbling is a concept in the DOM (Document Object Model) where
+            an event that is triggered on a child element "bubbles up" to its
+            parent elements. This means that when an event occurs on a child
+            element, it is first handled by the child element, and then the
+            event is passed upwards through each ancestor element (parent,
+            grandparent, etc.).
+          </p>
+        </div>
+        <!-- question-5  -->
+        <div class="bg-white w-4/5 mx-auto mt-6 p-6 shadow-lg rounded-lg">
+          <h4 class="font-medium">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h4>
+          <hr />
+          <p>
+            In JavaScript, you can create, add, and remove elements from the DOM
+            (Document Object Model) in the following ways: <br />
+            <span class="font-medium">1. Creating Elements:</span>To create a new element, you use
+            document.createElement(). <br />
+            <span class="font-medium">2. Adding Elements to the DOM:</span>Once an element is
+            created, you can add it to the DOM using methods like appendChild(),
+            insertBefore(), or append(). <br />
+            <span class="font-medium">3. Removing Elements from the DOM:</span>To remove an element,
+            you can use the remove() method or removeChild().
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script/blog.js"></script>
+  </body>
+</html>
